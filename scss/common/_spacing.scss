@@ -1,0 +1,47 @@
+// section spacing xl
+// content spacing l
+// title spacing l
+// paragraph spacing m
+
+$padding-xs: 0.3rem; // 5px
+$padding-s: 0.6rem; // 10px
+$padding-m: 0.9rem; // 15px
+$padding-l: 1.3rem; // 20px
+$padding-xl: 2.5rem; // 40px
+
+
+.margined {
+	&__v5 {
+		margin-bottom: $padding-xs;
+	}
+	&__v10 {
+		margin-bottom: $padding-s;
+	}
+	&__v15 {
+		margin-bottom: $padding-m;
+	}
+	&__v20 {
+		margin-bottom: $padding-l;
+	}
+	&__v40 {
+		margin-bottom: $padding-xl;
+	}
+}
+
+.padded {
+	&__v5 {
+		padding-bottom: $padding-xs;
+	}
+	&__v10 {
+		padding-bottom: $padding-s;
+	}
+	&__v15 {
+		padding-bottom: $padding-m;
+	}
+	&__v20 {
+		padding-bottom: $padding-l;
+	}
+	&__v40 {
+		padding-bottom: $padding-xl;
+	}
+}

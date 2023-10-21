@@ -1,0 +1,45 @@
+@use '../../../../scss/common/fonts' as f;
+@use '../../../../scss/common/colours' as c;
+@use '../../../../scss/common/spacing' as s;
+
+
+.app-header {
+	display: flex;
+	padding-top: s.$padding-xs;
+
+	&__left {
+		display: flex;
+		justify-content: left;
+		align-items: center;
+	}
+
+	&__right {
+		padding-top: s.$padding-xs;
+		display: flex;
+		justify-content: right;
+
+		app-header-menu {
+			margin-right: 2px; // todo: mat meno spacing
+		}
+	}
+}
+
+.app-header-title {
+	color: #FF3434;
+	font-size: f.$size-l;
+	text-shadow: 0 1px 2px c.$marineOutline;
+	text-transform: uppercase;
+
+	&__end {
+		font-size: f.$size-m;
+		text-shadow: none;
+	}
+}
+
+.app-menu-button {
+	&__item {
+		color: c.$marineOutline;
+		fill: c.$marineOutline;
+	}
+}
+

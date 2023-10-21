@@ -1,0 +1,11 @@
+<div class="row app-header">
+	<div class="row__two-thirds-static app-header__left">
+		<h1 class="app-header-title">Logbook <span class="app-header-title__end">Marine app</span></h1>
+	</div>
+	<div class="row__one-thirds-static app-header__right">
+		<button mat-icon-button aria-label="Example icon-button with a menu" (click)="setShowProfile();">
+			<mat-icon *ngIf="!showProfile">more_vert</mat-icon>
+			<mat-icon *ngIf="showProfile">arrow_back</mat-icon>
+		</button>
+	</div>
+</div>

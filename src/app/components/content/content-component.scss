@@ -1,0 +1,23 @@
+@use '../../../../scss/common/spacing' as s;
+@use '../../../../scss/common/colours' as c;
+
+app-content-entry {
+	width: 100%;
+}
+
+.content-filter {
+	width: 100%;
+	display: flex;
+	padding-top: s.$padding-xs;
+	justify-content: space-between;
+
+	&__left {
+	}
+
+	&__right {
+		margin-top: 4px; // todo: matchip margin top
+		margin-bottom: 4px; // todo: matchip margin bottom
+		padding-right: s.$padding-m;
+		cursor: pointer;
+	}
+}

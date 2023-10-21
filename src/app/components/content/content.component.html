@@ -1,0 +1,21 @@
+<div class="row margined margined__v15">
+	<div class="row__full content-filter">
+		<div class="content-filter__left">
+			<mat-chip-listbox aria-label="Log categorization">
+				<mat-chip-option (click)="setSelectedOption(CONSTANTS.LOG_ENTRY)">Logbook</mat-chip-option>
+				<mat-chip-option (click)="setSelectedOption(CONSTANTS.LOG_ENTRY_FUEL)">Fuel log</mat-chip-option>
+				<mat-chip-option (click)="setSelectedOption(CONSTANTS.LOG_ENTRY_MAINTENANCE)">Maintenance</mat-chip-option>
+			</mat-chip-listbox>
+		</div>
+		<div class="content-filter__right">
+			<mat-icon (click)="creating = !creating" *ngIf="!creating">add</mat-icon>
+			<mat-icon (click)="creating = !creating" *ngIf="creating">arrow_back</mat-icon>
+		</div>
+	</div>
+</div>
+<div class="row margined__v15" *ngIf="!creating">
+	<app-content-entry [entries]="filteredEntries"></app-content-entry>
+</div>
+<div class="row" *ngIf="creating">
+	Lets create a post
+</div>

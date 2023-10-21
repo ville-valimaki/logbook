@@ -1,0 +1,7 @@
+<div class="container">
+	<app-header (updateShowProfile)="toggleShowProfile();"></app-header>
+	<app-content *ngIf="!showProfile"></app-content>
+	<profile-content *ngIf="showProfile"></profile-content>
+</div>
+
+<router-outlet></router-outlet>

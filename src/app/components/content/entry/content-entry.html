@@ -1,0 +1,26 @@
+<mat-accordion class="content-row" multi>
+	<mat-expansion-panel class="content-row__item" *ngFor="let entry of entries;">
+		<mat-expansion-panel-header>
+			<mat-panel-title class="content-entry-title">
+				<mat-icon *ngIf="entry.type === CONSTANTS.LOG_ENTRY" class="content-entry-title__icon">airline_stops</mat-icon>
+				<mat-icon *ngIf="entry.type === CONSTANTS.LOG_ENTRY_MAINTENANCE" class="content-entry-title__icon content-entry-title__icon--small">build</mat-icon>
+				<mat-icon *ngIf="entry.type === CONSTANTS.LOG_ENTRY_FUEL" class="content-entry-title__icon content-entry-title__icon--small">oil_barrel</mat-icon>
+				{{ entry.date }}
+			</mat-panel-title>
+			<mat-panel-description>
+				{{ entry.title }}
+			</mat-panel-description>
+		</mat-expansion-panel-header>
+		<div class="content-entry-content">
+			<p class="content-entry-content__title">
+				{{ entry.time }} - Sunny, 13 ms southeast, {{ getTempTranslated(9, 1) }}
+			</p>
+			<p class="content-entry-content__details" *ngIf="entry.description">
+				{{ entry.description }}
+			</p>
+			<p class="content-entry-content__crew" *ngIf="entry.captain || entry.crew">
+				{{ entry.captain && entry.crew ? entry.captain + ',' : entry.captain }} {{ entry.crew }}
+			</p>
+		</div>
+	</mat-expansion-panel>
+</mat-accordion>

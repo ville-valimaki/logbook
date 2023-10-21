@@ -1,0 +1,50 @@
+@use 'breakpoints' as b;
+@use 'spacing' as s;
+
+.row {
+	width: 100%;
+	display: flex;
+	justify-content: left;
+	flex-wrap: wrap;
+	padding-left: s.$padding-m;
+	padding-right: s.$padding-m;
+
+	@media only screen and (min-width: b.$breakpoint) {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	&__full {
+		width: 100%;
+	}
+
+	&__half {
+		width: 100%;
+		@media only screen and (min-width: b.$breakpoint) {
+			width: 50%;
+		}
+	}
+
+	&__half-static {
+		width: 50%;
+	}
+
+	&__two-thirds-static {
+		width: 67%;
+	}
+
+	&__one-thirds-static {
+		width: 33%;
+	}
+
+	&__quarter {
+		width: 50%;
+		@media only screen and (min-width: b.$breakpoint) {
+			width: 25%;
+		}
+	}
+
+	&__quarter-static {
+		width: 25%;
+	}
+}

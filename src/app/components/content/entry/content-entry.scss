@@ -1,0 +1,39 @@
+@use '../../../../../scss/common/spacing' as s;
+@use '../../../../../scss/common/colours' as c;
+
+.content-row {
+	width: 100%;
+
+	&__item {
+		h1, h2, h3, p, span, div {
+			padding: 0;
+			margin: 0;
+			border: 0;
+			color: c.$darkGrey;
+			inset: 0;
+		}
+	}
+}
+
+.content-entry-title {
+	&__icon {
+		text-align: center;
+		padding-right: s.$padding-l;
+
+		&--small {
+			font-size: 20px;
+		}
+	}
+}
+
+mat-expansion-panel .content-entry-content {
+	&__title {
+		padding-bottom: s.$padding-m;
+		margin-bottom: s.$padding-m ;
+		border-bottom: 1px solid c.$borderGrey ;
+	}
+	&__details {
+		padding-bottom: s.$padding-m;
+		margin-bottom: s.$padding-m;
+	}
+}
