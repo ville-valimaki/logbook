@@ -1,0 +1,9 @@
+@use '../../../../scss/common/fonts' as f;
+@use '../../../../scss/common/colours' as c;
+
+.app-menu-button {
+	&__item {
+		color: c.$marineOutline;
+		fill: c.$marineOutline;
+	}
+}
