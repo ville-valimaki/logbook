@@ -1,0 +1,29 @@
+@use '../../../../scss/common/spacing' as s;
+
+.content-row {
+	width: 100%;
+}
+
+.content-entry-title {
+	&__icon {
+		margin-right: s.$padding-l;
+	}
+}
+
+.content-filter {
+	width: 100%;
+	display: flex;
+	padding-top: s.$padding-xs;
+
+	&__left {
+		display: flex;
+		justify-content: left;
+		align-items: center;
+	}
+
+	&__right {
+		padding-top: s.$padding-s; // 5px addition is 1px off from matchip group on left
+		display: flex;
+		justify-content: right;
+	}
+}

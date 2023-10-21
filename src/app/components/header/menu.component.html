@@ -1,0 +1,17 @@
+<button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+	<mat-icon>more_vert</mat-icon>
+</button>
+
+<mat-menu #menu="matMenu" yPosition="below">
+	<button mat-menu-item class="app-menu-button">
+		<mat-icon class="app-menu-button__item">close</mat-icon>
+	</button>
+	<button mat-menu-item class="app-menu-button">
+		<mat-icon class="app-menu-button__item">chevron_right</mat-icon>
+		<span class="app-menu-button__item">Account</span>
+	</button>
+	<button mat-menu-item class="app-menu-button">
+		<mat-icon class="app-menu-button__item">chevron_right</mat-icon>
+		<span class="app-menu-button__item">Boats</span>
+	</button>
+</mat-menu>
